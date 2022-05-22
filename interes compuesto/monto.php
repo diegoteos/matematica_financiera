@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="interes_compuesto.php" method="post">
+    <form action="monto.php" method="post">
         <input type="number" step="any" name="capital" value="" placeholder="Ingrese el capital" id="" <br><br>
         <br><br><input type="number" step="any" name="interes" value="" placeholder="Interes en formato %" id="" <br><br>
         <br><br><input type="number" name="periodos" value="" placeholder="Ingrese el valor de P" id="" required<br><br>
