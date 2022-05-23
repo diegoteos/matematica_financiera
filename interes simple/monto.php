@@ -1,5 +1,5 @@
 <?php
-include 'estilo.php';
+include '../estilos/cabecera.php';
 ?>
 
 <!DOCTYPE html>
@@ -9,13 +9,13 @@ include 'estilo.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interes compuesto instantaneo</title>
+    <title>Interes simple</title>
 </head>
 
 <body>
     <div class="container">
-        <form action="monto_instantaneo.php" method="post">
-            <h1>instantaneo: M = C e^(ni)</h1>
+        <form action="monto.php" method="post">
+            <h1>Formula: M = C (1 + n i)</h1>
            <strong>Capital:</strong><br>
             <input type="number" step="any" name="capital" value="" placeholder="Ingrese el capital" id="" required><br><br>
             <br><strong>Interes anual % </strong><br><input type="number" step="any" name="interes" value="" placeholder="Interes anual en formato %" id="" required><br><br>
@@ -42,9 +42,10 @@ if (!empty($_POST['capital']) && !empty($_POST['interes']) && !empty($_POST['tie
     $tiempo_duracion_credito = $_POST['tiempo']; // el periodo es igual a n en la formula correspondiente
 
     $tasa_anual = $interes / 100; // lo pasamos a notacion matematica
-    $potencia = $tiempo_duracion_credito * $tasa_anual;
-    $euler = M_E ** $potencia;
-    $resultado = $capital * $euler;    
+    $parentesis = 1 + $tiempo_duracion_credito * $tasa_anual;
+
+    $resultado = $capital * $parentesis;
+
     $numeroFormateado = number_format($resultado, 2);
     echo "<h2>El monto es de:<h2>";
     echo "<h1>Q$numeroFormateado<h1>";

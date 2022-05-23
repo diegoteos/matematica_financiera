@@ -9,7 +9,7 @@ include 'estilo.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interes compuesto</title>
+    <title>Interes compuesto instantaneo</title>
 </head>
 
 <body>
@@ -48,10 +48,11 @@ if (!empty($_POST['monto']) && !empty($_POST['interes']) && !empty($_POST['tiemp
     $numeroFormateado = number_format($resultado, 2);
     echo "<h2>El capital es de:<h2>";
     echo "<h1>Q$numeroFormateado<h1>";
+
+    $totalInteres = $monto - $resultado;
+    $numeroFormateado = number_format($totalInteres, 2);
+    echo '<br>';
+    echo "<h4>El interes generado es de:<h4>";
+    echo "<h2>Q$numeroFormateado<h2>";
 }
-
-
-
-
-
 ?>

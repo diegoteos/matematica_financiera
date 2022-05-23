@@ -9,13 +9,13 @@ include 'estilo.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interes compuesto</title>
+    <title>Interes compuesto capitalizable</title>
 </head>
 
 <body>
     <div class="container">
         <form action="capital.php" method="post">
-
+            <h1>capitalizable: C = M / ( 1 + i/p)^(np)</h1>
             <strong>Monto:</strong><br>
             <input type="number" step="any" name="monto" value="" placeholder="Ingrese el monto" id="" required><br><br>
             <strong>Interes anual % </strong><br><input type="number" step="any" name="interes" value="" placeholder="Interes anual en formato %" id="" required><br><br>
@@ -48,16 +48,15 @@ if (!empty($_POST['monto']) && !empty($_POST['interes']) && !empty($_POST['perio
     $parentesis_final = $parentesis ** $nporp;
     $resultado = $monto / $parentesis_final;
 
-    
+
     $numeroFormateado = number_format($resultado, 2);
     echo "<h2>El capital es de:<h2>";
     echo "<h1>Q$numeroFormateado<h1>";
-    
+
     '<br><br>';
     $interes2 = $monto - $resultado;
     $interesResultado = number_format($interes2, 2);
     echo "<br><h4>El interes resultante es de: <h4>Q" . $interesResultado;
-
 }
 
 

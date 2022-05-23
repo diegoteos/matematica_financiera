@@ -8,11 +8,12 @@ include 'estilo.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interes compuesto</title>
+    <title>Interes compuesto capitalizable</title>
 </head>
 
 <body>
     <div class="container">
+        <h1>capitalizable: M = C ( 1 + i/p)^(np)</h1>
         <form action="monto.php" method="post">
             <strong>Capital:</strong><br><input type="number" step="any" name="capital" value="" placeholder="Ingrese el capital" id="" required><br><br>
             <strong>Interes anual % </strong><br><input type="number" step="any" name="interes" value="" placeholder="Interes en formato %" id="" required><br><br>
