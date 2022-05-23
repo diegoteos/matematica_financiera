@@ -14,10 +14,10 @@ include 'estilo.php';
 <body>
     <div class="container">
         <form action="monto.php" method="post">
-            <strong>Capital:</strong><br><input type="number" step="any" name="capital" value="" placeholder="Ingrese el capital" id="" required><br><br>
-            <strong>Interes anual % </strong><br><input type="number" step="any" name="interes" value="" placeholder="Interes en formato %" id="" required><br><br>
-            <strong>Periodos anuales (P):</strong><br><input type="number" name="periodos" value="" placeholder="Ingrese el valor de P" id="" required><br><br>
-            <strong>Tiempo (años):</strong><br><input type="number" step="any" name="tiempos" value="" placeholder="Duracion credito en años" id="" required><br><br>
+        <strong>Capital:</strong><br><input type="number" step="any" name="capital" value="" placeholder="Ingrese el capital" id="" required><br><br>
+            <br><strong>Interes anual % </strong><br><input type="number" step="any" name="interes" value="" placeholder="Interes en formato %" id="" required><br><br>
+            <br><strong>Periodos anuales (P):</strong><br><input type="number" name="periodos" value="" placeholder="Ingrese el valor de P" id="" required><br><br>
+            <br><strong>Tiempo (años):</strong><br><input type="number" step="any" name="tiempos" value="" placeholder="Duracion credito en años" id="" required><br><br>
             Si dividiste una cantidad de semanas, quincenas, meses, bimestres, etc., entre 12 para sacar la cantidad de años y como resultado
             te dio infinitos decimales, incluye unicamente 10 para que tu resultado sea mas optimo.
             <br><br><button type="submit">Obtener resultados</button>
@@ -58,15 +58,9 @@ if (!empty($_POST['capital']) && !empty($_POST['interes']) && !empty($_POST['per
     $parentesis_final = $parentesis ** $nporp;
     $resultado = $parentesis_final * $capital;
 
-
     $numeroFormateado = number_format($resultado, 2);
     echo "<h2>El monto total en quetzales es de:<h2>";
     echo "<h1>Q$numeroFormateado<h1>";
-
-    '<br><br>';
-    $interes2 = $resultado - $capital;
-    $interesResultado = number_format($interes2, 2);
-    echo "<br><h4>El interes resultante es de: <h4>Q" . $interesResultado;
 }
 
 

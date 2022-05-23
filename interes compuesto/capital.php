@@ -1,3 +1,7 @@
+<?php
+include 'estilo.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,21 +13,25 @@
 </head>
 
 <body>
-    <form action="capital.php" method="post">
-        <input type="number" step="any" name="monto" value="" placeholder="Ingrese el monto" id="" <br><br>
-        <br><br><input type="number" step="any" name="interes" value="" placeholder="Interes anual en formato %" id="" <br><br>
-        <br><br><input type="number" name="periodos" value="" placeholder="Ingrese el valor de P" id="" required<br><br>
-        <br><br><input type="number" step="any" name="tiempos" value="" placeholder="Duracion credito en años" id="" required<br><br>
-        Si dividiste una cantidad de semanas, quincenas, meses, bimestres, etc., entre 12 para sacar la cantidad de años y como resultado 
-        te dio infinitos decimales, incluye unicamente 10 para que tu resultado sea mas optimo.
-        <br><br><button type="submit">Obtener resultados</button>
-    </form>
+    <div class="container">
+        <form action="capital.php" method="post">
+
+            <strong>Monto:</strong><br>
+            <input type="number" step="any" name="monto" value="" placeholder="Ingrese el monto" id="" required><br><br>
+            <strong>Interes anual % </strong><br><input type="number" step="any" name="interes" value="" placeholder="Interes anual en formato %" id="" required><br><br>
+            <strong>Periodos anuales (P):</strong><br><input type="number" name="periodos" value="" placeholder="Ingrese el valor de P" id="" required><br><br>
+            <strong>Tiempo (años):</strong><br><input type="number" step="any" name="tiempos" value="" placeholder="Duracion credito en años" id="" required><br><br>
+            Si dividiste una cantidad de semanas, quincenas, meses, bimestres, etc., entre 12 para sacar la cantidad de años y como resultado
+            te dio infinitos decimales, incluye unicamente 10 para que tu resultado sea mas optimo.
+            <br><br><button type="submit">Obtener resultados</button>
+        </form>
 </body>
+</div>
 
 </html>
 
 <?php
-if ($_POST) {
+if (!empty($_POST['monto']) && !empty($_POST['interes']) && !empty($_POST['periodos']) && !empty($_POST['tiempos'])) {
 
     echo "<br><br>";
     $capital = 0;
@@ -40,9 +48,16 @@ if ($_POST) {
     $parentesis_final = $parentesis ** $nporp;
     $resultado = $monto / $parentesis_final;
 
+    
     $numeroFormateado = number_format($resultado, 2);
     echo "<h2>El capital es de:<h2>";
     echo "<h1>Q$numeroFormateado<h1>";
+    
+    '<br><br>';
+    $interes2 = $monto - $resultado;
+    $interesResultado = number_format($interes2, 2);
+    echo "<br><h4>El interes resultante es de: <h4>Q" . $interesResultado;
+
 }
 
 
