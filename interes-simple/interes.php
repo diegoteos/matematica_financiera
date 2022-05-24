@@ -1,5 +1,5 @@
 <?php
-include '../estilos/cabecera.php';
+include '../menu/menu-simple.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,9 +14,15 @@ include '../estilos/cabecera.php';
 
 <body>
     <div class="container">
+        <div class="p-5 bg-light">
+            <div class="container">
+                <h2>Formula para obtener el interes:</h2>
+                <h2>I = C n i</h2>
+                <hr class="my-2">
+                <p>Ingrese los datos</p>
+            </div>
+        </div>
         <form action="interes.php" method="post">
-            <h2>Formula para obtener el interes:</h2> 
-            <h2>I = C n i</h2>
             <br><strong>Capital:</strong><br>
             <input type="number" step="any" name="capital" value="" placeholder="Ingrese el capital" id="" required><br><br>
             <br><strong>Tasa de interes anual % </strong><br><input type="number" step="any" name="interes" value="" placeholder="Tasa de interes anual en formato %" id="" required><br><br>
@@ -42,11 +48,9 @@ if (!empty($_POST['interes']) && !empty($_POST['capital']) && !empty($_POST['tie
     $tiempo_duracion_credito = $_POST['tiempo']; // el periodo es igual a n en la formula correspondiente
     $tasa_anual = $interes / 100; //convertimos a notacion matematica el interes
     //echo "el capital es de $capital el tiempo es $tiempo_duracion_credito y el interes"
-    $resultado  = $capital * $tiempo_duracion_credito * $tasa_anual; 
+    $resultado  = $capital * $tiempo_duracion_credito * $tasa_anual;
 
     $numeroFormateado = number_format($resultado, 2);
     echo "<h2>Los intereses son de: Q$numeroFormateado <h2>";
-
-
 }
 ?>

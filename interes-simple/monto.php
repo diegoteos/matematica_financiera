@@ -1,5 +1,5 @@
 <?php
-include '../estilos/cabecera.php';
+include '../menu/menu-simple.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,9 +14,15 @@ include '../estilos/cabecera.php';
 
 <body>
     <div class="container">
+        <div class="p-5 bg-light">
+            <div class="container">
+                <h2>Formula para obtener el monto:</h2>
+                <h2>M = C (1 + n i)</h2>
+                <hr class="my-2">
+                <p>Ingrese los datos</p>
+            </div>
+        </div>
         <form action="monto.php" method="post">
-            <h2>Formula para obtener el monto:</h2>
-            <h2>M = C (1 + n i)</h2>
             <br><strong>Capital:</strong><br>
             <input type="number" step="any" name="capital" value="" placeholder="Ingrese el capital" id="" required><br><br>
             <br><strong>Interes anual % </strong><br><input type="number" step="any" name="interes" value="" placeholder="Interes anual en formato %" id="" required><br><br>
@@ -58,5 +64,3 @@ if (!empty($_POST['capital']) && !empty($_POST['interes']) && !empty($_POST['tie
     echo "<h2>Q$numeroFormateado<h2>";
 }
 ?>
-
-

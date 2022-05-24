@@ -1,5 +1,5 @@
 <?php
-include '../estilos/cabecera.php';
+include '../menu/menu-simple.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,9 +14,15 @@ include '../estilos/cabecera.php';
 
 <body>
     <div class="container">
+        <div class="p-5 bg-light">
+            <div class="container">
+                <h2>Formula para obtener el tiempo del prestamo:</h2>
+                <h2>n = I / (C i)</h2>
+                <hr class="my-2">
+                <p>Ingrese los datos</p>
+            </div>
+        </div>
         <form action="tiempo.php" method="post">
-            <h2>Formula para obtener el tiempo del prestamo:</h2> 
-            <h2>n = I / (C i)</h2>
             <br><strong>Total intereses generados:</strong><br>
             <input type="number" step="any" name="intereses" value="" placeholder="Ingrese los intereses" id="" required><br><br>
             <br><strong>Capital: </strong><br><input type="number" step="any" name="capital" value="" placeholder="Ingrese el capital:" id="" required><br><br>
@@ -37,10 +43,10 @@ if (!empty($_POST['intereses']) && !empty($_POST['capital']) && !empty($_POST['i
     echo "<br><br>";
     $intereses = $_POST['intereses'];
     $capital = $_POST['capital'];
-    $interes = $_POST['interes']; 
+    $interes = $_POST['interes'];
 
     $tasa_anual = $interes / 100;
-    
+
     $multi = $capital * $tasa_anual;
     $igual = $intereses / $multi;
     $total_años = intval($igual);  // pasamos a enteros el resultado para extraer la cantidad de años

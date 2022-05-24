@@ -1,6 +1,5 @@
-
 <?php
-include 'estilos/cabecera.php';
+include 'menu/menu-general.php';
 ?>
 
 
@@ -16,15 +15,23 @@ include 'estilos/cabecera.php';
 </head>
 
 <body>
-
-        <h2>Obtener el capital C = M - I</h2>
-        <h3>C = capital</h3>
-        <h3>M = monto</h3>
-        <h3>I = interes</h3>
+    <div class="container">
+        <div class="p-5 bg-light">
+            <div class="container">
+                <h1>Interes simple</h1>
+                <h2>Obtener el capital C = M - I</h2>
+                <h3>C = capital</h3>
+                <h3>M = monto</h3>
+                <h3>I = interes</h3>
+                <hr class="my-2">
+                <p>Ingrese los datos</p>
+            </div>
+        </div>
         <form action="capital.php" method="post">
-            <br><br>Capital = <input type="number" step="any" name="monto" value="" placeholder="Ingrese el monto" required> - <input type="number" step="any" name="interes" value="" placeholder="Ingrese el interes" id="" required ><br><br>
+            <br><br>Capital = <input type="number" step="any" name="monto" value="" placeholder="Ingrese el monto" required> - <input type="number" step="any" name="interes" value="" placeholder="Ingrese el interes" id="" required><br><br>
             <br><br><button type="submit">Obtener monto</button>
         </form>
+    </div>
 </body>
 
 </html>

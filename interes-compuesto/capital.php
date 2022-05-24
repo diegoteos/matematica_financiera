@@ -1,5 +1,5 @@
 <?php
-include 'estilo.php';
+include '../menu/menu-simple.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,8 +14,15 @@ include 'estilo.php';
 
 <body>
     <div class="container">
+        <div class="p-5 bg-light">
+            <div class="container">
+                <h1>Formula para el interes compuesto</h1>
+                <h1>capitalizable: C = M / ( 1 + i/p)^(np)</h1>
+                <hr class="my-2">
+                <p>Ingrese los datos</p>
+            </div>
+        </div>
         <form action="capital.php" method="post">
-            <h1>capitalizable: C = M / ( 1 + i/p)^(np)</h1>
             <strong>Monto:</strong><br>
             <input type="number" step="any" name="monto" value="" placeholder="Ingrese el monto" id="" required><br><br>
             <strong>Interes anual % </strong><br><input type="number" step="any" name="interes" value="" placeholder="Interes anual en formato %" id="" required><br><br>

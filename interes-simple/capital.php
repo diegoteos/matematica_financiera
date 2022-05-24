@@ -1,5 +1,5 @@
 <?php
-include '../estilos/cabecera.php';
+include '../menu/menu-simple.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,9 +14,17 @@ include '../estilos/cabecera.php';
 
 <body>
     <div class="container">
+        <div class="p-5 bg-light">
+            <div class="container">
+                <h2>Formula para obtener el capital:</h2>
+                <h2>C = M / (1 + n i)</h2>
+                <hr class="my-2">
+                <p>Ingrese los datos</p>
+
+            </div>
+        </div>
+
         <form action="capital.php" method="post">
-            <h2>Formula para obtener el capital:</h2>
-            <h2>C = M / (1 + n i)</h2>
             <br><strong>Monto:</strong><br>
             <input type="number" step="any" name="monto" value="" placeholder="Ingrese el monto" id="" required><br><br>
             <br><strong>Interes anual % </strong><br><input type="number" step="any" name="interes" value="" placeholder="Interes anual en formato %" id="" required><br><br>

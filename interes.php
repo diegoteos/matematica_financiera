@@ -1,5 +1,5 @@
 <?php
-include 'estilos/cabecera.php';
+include 'menu/menu-general.php';
 ?>
 
 
@@ -14,16 +14,25 @@ include 'estilos/cabecera.php';
 </head>
 
 <body>
+    <div class="container">
+        <div class="p-5 bg-light">
+            <div class="container">
+                <h1>Interes simple</h1>
+                <h2>Obtener el interes, formula: I = M - C</h2>
+                <h3>I = interes</h3>
+                <h3>C = capital</h3>
+                <h3>M = monto</h3>
+                <hr class="my-2">
+                <p>Ingrese los datos</p>
+            </div>
+        </div>
 
-    <h2>Obtener el interes, formula: I = M - C</h2>
-    <h3>I = interes</h3>
-    <h3>C = capital</h3>
-    <h3>M = monto</h3>
+        <form action="interes.php" method="post">
+            <br><br>Interes = <input type="number" step="any" name="monto" value="" placeholder="Ingrese el monto" required> - <input type="number" step="any" name="capital" value="" placeholder="Ingrese el capital" id="" required><br><br>
+            <br><br><button type="submit">Obtener monto</button>
+        </form>
 
-    <form action="interes.php" method="post">
-        <br><br>Capital = <input type="number" step="any" name="monto" value="" placeholder="Ingrese el monto" required> - <input type="number" step="any" name="capital" value="" placeholder="Ingrese el capital" id="" required><br><br>
-        <br><br><button type="submit">Obtener monto</button>
-    </form>
+    </div>
 </body>
 
 </html>
