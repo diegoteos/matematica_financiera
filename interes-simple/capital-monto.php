@@ -17,8 +17,6 @@ include '../estilos/cabecera.php';
         <form action="capital2.php" method="post">
             <h2>Formula para obtener el Capital:</h2> 
             <h3>C = I / (n i)</h3>
-            <h2>Formula para obtener el Monto:</h2> 
-            <h3>M = C + I</h3>
             <br><strong>Interes generado:</strong><br>
             <input type="number" step="any" name="intereses" value="" placeholder="Ingrese el interes" id="" required><br><br>
             <br><strong>Tasa de interes anual % </strong><br><input type="number" step="any" name="interes" value="" placeholder="Tasa de interes anual en formato %" id="" required><br><br>
