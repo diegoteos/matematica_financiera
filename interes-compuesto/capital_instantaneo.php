@@ -1,5 +1,5 @@
 <?php
-include '../menu/menu-simple.php';
+include '../menu/menu-compuesto.php';
 ?>
 
 <!DOCTYPE html>
@@ -16,12 +16,14 @@ include '../menu/menu-simple.php';
     <div class="container">
         <div class="p-5 bg-light">
             <div class="container">
-                <h1>Formula para el interes compuesto</h1>
-                <h1>instantaneo: C = M / e^(ni)</h1>
+                <h1>Interes compuesto instantaneo:</h1>
+                <h3>Formula para obtener el Capital</h3>
+                <h3>C = M / e^(ni)</h3>
                 <hr class="my-2">
                 <p>Ingrese los datos</p>
             </div>
         </div>
+        <br>
         <form action="capital_instantaneo.php" method="post">
             <strong>Monto:</strong><br>
             <input type="number" step="any" name="monto" value="" placeholder="Ingrese el monto" id="" required><br><br>
@@ -29,7 +31,7 @@ include '../menu/menu-simple.php';
             <br><strong>Tiempo (años):</strong><br><input type="number" step="any" name="tiempo" value="" placeholder="Duracion credito en años" id="" required><br><br>
             Si dividiste una cantidad de semanas, quincenas, meses, bimestres, etc., entre 12 para sacar la cantidad de años y como resultado
             te dio infinitos decimales, incluye unicamente 10 para que tu resultado sea mas optimo.
-            <br><br><button type="submit">Obtener resultados</button>
+            <br><br><button class="btn btn-success" type="submit">Obtener resultados</button>
         </form>
 </body>
 </div>

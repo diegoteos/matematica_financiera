@@ -3,6 +3,7 @@ include 'menu/menu-general.php';
 ?>
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,7 +30,7 @@ include 'menu/menu-general.php';
 
         <form action="interes.php" method="post">
             <br><br>Interes = <input type="number" step="any" name="monto" value="" placeholder="Ingrese el monto" required> - <input type="number" step="any" name="capital" value="" placeholder="Ingrese el capital" id="" required><br><br>
-            <br><br><button type="submit">Obtener monto</button>
+            <br><br><button type="submit" class="btn btn-success">Obtener monto</button>
         </form>
 
     </div>

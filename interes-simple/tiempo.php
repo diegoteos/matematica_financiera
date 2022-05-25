@@ -16,8 +16,9 @@ include '../menu/menu-simple.php';
     <div class="container">
         <div class="p-5 bg-light">
             <div class="container">
-                <h2>Formula para obtener el tiempo del prestamo:</h2>
-                <h2>n = I / (C i)</h2>
+                <h1>Interes simple:</h1>
+                <h3>Formula para obtener el tiempo del prestamo:</h3>
+                <h3>n = I / (C i)</h3>
                 <hr class="my-2">
                 <p>Ingrese los datos</p>
             </div>
@@ -27,7 +28,7 @@ include '../menu/menu-simple.php';
             <input type="number" step="any" name="intereses" value="" placeholder="Ingrese los intereses" id="" required><br><br>
             <br><strong>Capital: </strong><br><input type="number" step="any" name="capital" value="" placeholder="Ingrese el capital:" id="" required><br><br>
             <br><strong>Tasa de interes anual % </strong><br><input type="number" step="any" name="interes" value="" placeholder="Tasa de interes anual en formato %" id="" required><br><br>
-            <br><br><button type="submit">Obtener resultados</button>
+            <br><br><button class="btn btn-success" type="submit">Obtener resultados</button>
         </form>
 </body>
 </div>

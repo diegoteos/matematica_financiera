@@ -29,7 +29,7 @@ include 'menu/menu-general.php';
         </div>
         <form action="capital.php" method="post">
             <br><br>Capital = <input type="number" step="any" name="monto" value="" placeholder="Ingrese el monto" required> - <input type="number" step="any" name="interes" value="" placeholder="Ingrese el interes" id="" required><br><br>
-            <br><br><button type="submit">Obtener monto</button>
+            <br><br><button type="submit" class="btn btn-success">Obtener monto</button>
         </form>
     </div>
 </body>

@@ -11,10 +11,9 @@
 
 <body>
     <div class="container">
-    <hr class="my-2">
         <nav class=" navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.php">Inicio</a>
+                <a class="navbar-brand" href="index.php">Inicio</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -26,12 +25,12 @@
                                 Tipo de interes:
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="../capital.php">Formulas generales</a></li>
+                                <li><a class="dropdown-item" href="capital.php">Formulas generales</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="capital.php">Interes simple</a></li>
-                                <li><a class="dropdown-item" href="../interes-compuesto/capital.php">Interes compuesto</a></li>
+                                <li><a class="dropdown-item" href="interes-simple/capital.php">Interes simple</a></li>
+                                <li><a class="dropdown-item" href="interes-compuesto/capital.php">Interes compuesto</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -39,41 +38,7 @@
                 </div>
             </div>
         </nav>
-
-        <nav class=" navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-    
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                        <a class="navbar-brand" href="capital.php">Capital</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="navbar-brand" href="monto.php">Monto</a>
-                        </li>
-                        </li>
-                        <li class="nav-item">
-                        <a class="navbar-brand" href="interes.php">Interes </a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="navbar-brand" href="tiempo.php">Tiempo</a>
-                        </li>
-                        <li class="nav-item">
-                        <li class="nav-item">
-                        <a class="navbar-brand" href="tasa-interes.php">Tasa de interes anual</a>
-                        </li>
-                        <li class="nav-item">
-                        <li class="nav-item">
-                        <a class="navbar-brand" href="capital-monto.php">Determinar capital o monto</a>
-                        </li>
-                        
-                    </ul>
-
-                </div>
-            </div>
-        </nav>
-        <hr class="my-2">
-
+    </div>
     <br><br>
 
 

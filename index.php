@@ -1,5 +1,5 @@
 <?php
-include 'menu/menu-general.php';
+include 'menu/menu-index.php';
 ?>
 
 <!DOCTYPE html>
