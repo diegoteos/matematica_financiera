@@ -16,7 +16,7 @@ include '../menu/menu-simple.php';
     <div class="container">
         <div class="p-5 bg-light">
             <div class="container">
-                <h1>Interes simple:</h1>
+                <h1 style='color:red'>Interes simple:</h1>
                 <h3>Formula para obtener el tiempo del prestamo:</h3>
                 <h3>n = I / (C i)</h3>
                 <hr class="my-2">
@@ -25,9 +25,9 @@ include '../menu/menu-simple.php';
         </div>
         <form action="tiempo.php" method="post">
             <br><strong>Total intereses generados:</strong><br>
-            <input type="number" step="any" name="intereses" value="" placeholder="Ingrese los intereses" id="" required><br><br>
-            <br><strong>Capital: </strong><br><input type="number" step="any" name="capital" value="" placeholder="Ingrese el capital:" id="" required><br><br>
-            <br><strong>Tasa de interes anual % </strong><br><input type="number" step="any" name="interes" value="" placeholder="Tasa de interes anual en formato %" id="" required><br><br>
+            <input type="number" step="any" name="intereses" value="" class="col-sm-2 col-form-label" placeholder="Ingrese los intereses" id="" required><br>
+            <br><strong>Capital: </strong><br><input type="number" step="any" name="capital" value="" class="col-sm-2 col-form-label" placeholder="Ingrese el capital:" id="" required><br>
+            <br><strong>Tasa de interes anual % </strong><br><input type="number" step="any" name="interes" value="" class="col-sm-2 col-form-label" placeholder="Tasa de interes anual en formato %" id="" required><br>
             <br><br><button class="btn btn-success" type="submit">Obtener resultados</button>
         </form>
 

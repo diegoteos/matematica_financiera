@@ -11,7 +11,7 @@
 
 <body>
     <div class="container">
-    <hr class="my-2">
+        <hr class="my-2">
         <nav class=" navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.php">Inicio</a>
@@ -23,7 +23,7 @@
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <strong style='color:black;'>Selecciona aquí el tipo de interes:</strong>
+                                <strong style='color:black;'>Selecciona aquí el tipo de interes:</strong>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="capital.php">Formulas generales</a></li>
@@ -41,7 +41,7 @@
         </nav>
         <hr class="my-2">
     </div>
-    <br><br>
+
 
 
 

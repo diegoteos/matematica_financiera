@@ -11,7 +11,7 @@
 
 <body>
     <div class="container">
-    <hr class="my-2">
+        <hr class="my-2">
         <nav class=" navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../index.php">Inicio</a>
@@ -23,7 +23,7 @@
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <strong style='color:black;'>Selecciona aquí el tipo de interes:</strong>
+                                <strong style='color:black;'>Selecciona aquí el tipo de interes:</strong>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="../capital.php">Formulas generales</a></li>
@@ -39,53 +39,36 @@
                 </div>
             </div>
         </nav>
-
         <nav class=" navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-    
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                        <a class="navbar-brand" href="capital.php">Capital</a>
+                            <a class="navbar-brand" href="capital.php">Capital</a>
                         </li>
                         <li class="nav-item">
-                        <a class="navbar-brand" href="monto.php">Monto</a>
+                            <a class="navbar-brand" href="monto.php">Monto</a>
                         </li>
                         </li>
                         <li class="nav-item">
-                        <a class="navbar-brand" href="interes.php">Interes </a>
+                            <a class="navbar-brand" href="interes.php">Interes </a>
                         </li>
                         <li class="nav-item">
-                        <a class="navbar-brand" href="tiempo.php">Tiempo</a>
-                        </li>
-                        <li class="nav-item">
-                        <li class="nav-item">
-                        <a class="navbar-brand" href="tasa-interes.php">Tasa de interes anual</a>
+                            <a class="navbar-brand" href="tiempo.php">Tiempo</a>
                         </li>
                         <li class="nav-item">
                         <li class="nav-item">
-                        <a class="navbar-brand" href="capital-monto.php">Determinar capital o monto</a>
+                            <a class="navbar-brand" href="tasa-interes.php">Tasa de interes anual</a>
                         </li>
-                        
+                        <li class="nav-item">
+                        <li class="nav-item">
+                            <a class="navbar-brand" href="capital-monto.php">Determinar capital o monto</a>
+                        </li>
                     </ul>
-
                 </div>
             </div>
         </nav>
         <hr class="my-2">
-
-    <br><br>
-
-
-
-
-
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
-
-
-
-<?php {
-}
-
-?>

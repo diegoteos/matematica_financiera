@@ -18,7 +18,7 @@ include 'menu/menu-general.php';
     <div class="container">
         <div class="p-5 bg-light">
             <div class="container">
-                <h1>Interes simple</h1>
+                <h1 style='color:red'>Interes simple</h1>
                 <h2>Obtener el monto M = C + I</h2>
                 <h3>M = monto</h3>
                 <h3>C = capital</h3>
@@ -28,7 +28,10 @@ include 'menu/menu-general.php';
             </div>
         </div>
         <form action="monto.php" method="post">
-            <br><br>Monto = <input type="number" step="any" name="capital" value="" placeholder="Capital" required> + <input type="number" name="interes" value="" placeholder="Interes" id="" required><br><br>
+            <br><br><strong>Capital:</strong><br>
+            <input type="number" step="any" name="capital" value="" class="col-sm-2 col-form-label" placeholder="Ingrese el capital" required><br />
+            <br><strong>Intereses:</strong><br>
+            <input type="number" name="interes" value="" placeholder="Ingrese el interes" class="col-sm-2 col-form-label" id="" required><br>
             <br><br><button type="submit" class="btn btn-success">Obtener monto</button>
         </form>
     </div>

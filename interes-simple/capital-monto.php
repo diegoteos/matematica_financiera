@@ -16,7 +16,7 @@ include '../menu/menu-simple.php';
     <div class="container">
         <div class="p-5 bg-light">
             <div class="container">
-                <h1>Interes simple:</h1>
+                <h1 style='color:red'>Interes simple:</h1>
                 <h3>Formula para obtener el capital y monto:</h3>
                 <h3>Capital = I / (n i)</h3>
                 <h3>Monto = C + I </h3>
@@ -27,9 +27,9 @@ include '../menu/menu-simple.php';
         </div>
         <form action="capital-monto.php" method="post">
             <br><strong>Interes generado:</strong><br>
-            <input type="number" step="any" name="intereses" value="" placeholder="Ingrese el interes" id="" required><br><br>
-            <br><strong>Tasa de interes anual % </strong><br><input type="number" step="any" name="interes" value="" placeholder="Tasa de interes anual en formato %" id="" required><br><br>
-            <br><strong>Tiempo (años):</strong><br><input type="number" step="any" name="tiempo" value="" placeholder="Duracion credito en años" id="" required><br><br>
+            <input type="number" step="any" name="intereses" value="" class="col-sm-2 col-form-label" placeholder="Ingrese el interes" id="" required><br>
+            <br><strong>Tasa de interes anual % </strong><br><input type="number" step="any" name="interes" value="" class="col-sm-2 col-form-label" placeholder="Tasa de interes anual en formato %" id="" required><br>
+            <br><strong>Tiempo (años):</strong><br><input type="number" step="any" name="tiempo" value="" class="col-sm-2 col-form-label" placeholder="Duracion credito en años" id="" required><br>
             Si dividiste una cantidad de semanas, quincenas, meses, bimestres, etc., entre 12 para sacar la cantidad de años y como resultado
             te dio infinitos decimales, incluye unicamente 10 para que tu resultado sea mas optimo.
             <br><br><button class="btn btn-success" type="submit">Obtener resultados</button>
