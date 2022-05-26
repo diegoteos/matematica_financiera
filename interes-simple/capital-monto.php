@@ -53,7 +53,7 @@ include '../menu/menu-simple.php';
             $montoFormateado = number_format($montoFinal, 2);
             '<div class="container">';
             echo "<h2 style='color:#FF0000'>El capital es de: Q$capitalFormateado <h2>";
-            echo "<h2 style='color:#FF0000'>El monto total es de: Q$montoFormateado <h2>";
+            echo "<h2>El monto total es de: Q$montoFormateado <h2>";
         }
         ?>
 

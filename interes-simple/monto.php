@@ -52,14 +52,11 @@ include '../menu/menu-simple.php';
 
             $numeroFormateado = number_format($resultado, 2);
             '<div class="container">';
-            echo "<h2 style='color:#FF0000'>El monto es de:<h2>";
-            echo "<h1 style='color:#FF0000'>Q$numeroFormateado<h1>";
+            echo "<h2 style='color:#FF0000'>El monto es de: Q$numeroFormateado<h2>";
 
             $totalInteres = $resultado - $capital;
             $numeroFormateado = number_format($totalInteres, 2);
-            echo '<br>';
-            echo "<h4>El interes generado es de:<h4>";
-            echo "<h2>Q$numeroFormateado<h2>";
+            echo "<h4>El interes generado es de: Q$numeroFormateado<h4>";
         }
         ?>
 

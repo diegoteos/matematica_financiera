@@ -56,13 +56,12 @@ include '../menu/menu-compuesto.php';
 
             $numeroFormateado = number_format($resultado, 2);
             '<div class="container">';
-            echo "<h2 style='color:#FF0000'>El capital es de:<h2>";
-            echo "<h1 style='color:#FF0000'>Q$numeroFormateado<h1>";
+            echo "<h2 style='color:#FF0000'>El capital es de: Q$numeroFormateado<h2>";
 
             '<br><br>';
             $interes2 = $monto - $resultado;
             $interesResultado = number_format($interes2, 2);
-            echo "<br><h4>El interes resultante es de: <h4>Q" . $interesResultado;
+            echo "<h4>El interes resultante es de: Q$interesResultado<h4><br>";
         }
         ?>
 </body>

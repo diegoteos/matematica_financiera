@@ -48,7 +48,7 @@ include 'menu/menu-general.php';
 
         $numeroFormateado = number_format($interes, 2);
         ?>
-        '<div class="container">';
+        <div class="container">
             <?php 
         echo "<h2 style='color:#FF0000'>El interes total en quetzales es de: Q$numeroFormateado<h2>";
     }

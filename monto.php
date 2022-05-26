@@ -47,8 +47,10 @@ include 'menu/menu-general.php';
         $monto = $capital + $interes;
 
         $numeroFormateado = number_format($monto, 2);
-        '<div class="container">';
-        echo "<h2 style='color:#FF0000'>El monto total en quetzales es de:<h2>" . "<h1>Q$numeroFormateado<h1>";
+        ?>
+        <div class="container">
+        <?php 
+        echo "<h2 style='color:#FF0000'>El monto total en quetzales es de: Q$numeroFormateado<h1>";
     }
     ?>
 

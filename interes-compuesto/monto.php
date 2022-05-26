@@ -68,12 +68,11 @@ include '../menu/menu-compuesto.php';
 
         '<div class="container">';
         $numeroFormateado = number_format($resultado, 2);
-        echo "<div class='container'> <h2 style='color:#FF0000'>El monto total en quetzales es de:<h2>";
-        echo "<h1 style='color:#FF0000'>Q$numeroFormateado<h1>";
+        echo "<div class='container'> <h2 style='color:#FF0000'>El monto total en quetzales es de: Q$numeroFormateado<h2>";
 
         $interes2 = $resultado - $capital;
         $interesResultado = number_format($interes2, 2);
-        echo "<br><h4>El interes resultante es de: <h4>Q" . $interesResultado;
+        echo "<h4>El interes resultante es de: Q $interesResultado</h4>";
     }
     ?>
     <br><br>
