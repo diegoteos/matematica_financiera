@@ -33,21 +33,19 @@ include '../menu/menu-compuesto.php';
             <br><br><button class="btn btn-success" type="submit">Obtener resultados</button>
         </form>
     </div>
-</body>
 
-</html>
 
-<?php
-if (!empty($_POST['capital']) && !empty($_POST['interes']) && !empty($_POST['periodos']) && !empty($_POST['tiempos'])) {
+    <?php
+    if (!empty($_POST['capital']) && !empty($_POST['interes']) && !empty($_POST['periodos']) && !empty($_POST['tiempos'])) {
 
-    echo "<br><br>";
-    $monto = 0;
-    $capital = $_POST['capital'];
-    $interes = $_POST['interes'];
-    $periodos_al_año = $_POST['periodos']; // el periodo anual es lo que corresponde a p en la formula correspondiente
-    $tiempo_duracion_credito = $_POST['tiempos']; // el periodo es igual a n en la formula correspondiente
+        echo "<br><br>";
+        $monto = 0;
+        $capital = $_POST['capital'];
+        $interes = $_POST['interes'];
+        $periodos_al_año = $_POST['periodos']; // el periodo anual es lo que corresponde a p en la formula correspondiente
+        $tiempo_duracion_credito = $_POST['tiempos']; // el periodo es igual a n en la formula correspondiente
 
-    /*
+        /*
     echo "VERIFICAMOS LA RECEPCION DE LOS DATOS:";
     echo "<br/> capital: " . $capital;
     echo "<br/> interes: " . $interes;
@@ -57,30 +55,28 @@ if (!empty($_POST['capital']) && !empty($_POST['interes']) && !empty($_POST['per
     echo "<br><br>";
     echo "<br/> EMPEZAMOS A OPERAR:";
 */
-    $tasa_anual = $interes / 100; // lo pasamos a notacion matematica
-    //echo "<br/> Esta es la tasa de interes anual: " . $tasa_anual;
-    //echo "<br> Este es el resultado de la division de la tasa de interes con periodo capitalizable anualmente";
+        $tasa_anual = $interes / 100; // lo pasamos a notacion matematica
+        //echo "<br/> Esta es la tasa de interes anual: " . $tasa_anual;
+        //echo "<br> Este es el resultado de la division de la tasa de interes con periodo capitalizable anualmente";
 
-    $division = $tasa_anual / $periodos_al_año;
-    $nporp = $tiempo_duracion_credito * $periodos_al_año;
+        $division = $tasa_anual / $periodos_al_año;
+        $nporp = $tiempo_duracion_credito * $periodos_al_año;
 
-    $parentesis = 1 + $division;
-    $parentesis_final = $parentesis ** $nporp;
-    $resultado = $parentesis_final * $capital;
+        $parentesis = 1 + $division;
+        $parentesis_final = $parentesis ** $nporp;
+        $resultado = $parentesis_final * $capital;
 
+        '<div class="container">';
+        $numeroFormateado = number_format($resultado, 2);
+        echo "<div class='container'> <h2 style='color:#FF0000'>El monto total en quetzales es de:<h2>";
+        echo "<h1 style='color:#FF0000'>Q$numeroFormateado<h1>";
 
-    $numeroFormateado = number_format($resultado, 2);
-    echo "<h2>El monto total en quetzales es de:<h2>";
-    echo "<h1>Q$numeroFormateado<h1>";
+        $interes2 = $resultado - $capital;
+        $interesResultado = number_format($interes2, 2);
+        echo "<br><h4>El interes resultante es de: <h4>Q" . $interesResultado;
+    }
+    ?>
+    <br><br>
+</body>
 
-    '<br><br>';
-    $interes2 = $resultado - $capital;
-    $interesResultado = number_format($interes2, 2);
-    echo "<br><h4>El interes resultante es de: <h4>Q" . $interesResultado;
-}
-
-
-
-
-
-?>
+</html>

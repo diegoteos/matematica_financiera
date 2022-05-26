@@ -32,28 +32,30 @@ include '../menu/menu-simple.php';
             te dio infinitos decimales, incluye unicamente 10 para que tu resultado sea mas optimo.
             <br><br><button class="btn btn-success" type="submit">Obtener resultados</button>
         </form>
+
+        <?php
+
+
+
+        if (!empty($_POST['intereses']) && !empty($_POST['capital']) && !empty($_POST['tiempo'])) {
+
+            echo "<br><br>";
+            $intereses = $_POST['intereses'];
+            $capital = $_POST['capital'];
+            $tiempo_duracion_credito = $_POST['tiempo']; // el periodo es igual a n en la formula correspondiente
+
+            $multiplicacion = $capital * $tiempo_duracion_credito;
+
+            $resultado = $intereses / $multiplicacion;
+            $tasa_anual = $resultado * 100; // lo pasamos a notacion matematica
+
+            $tasa_anualrespuesta = number_format($tasa_anual, 1);
+            '<div class="container">';
+            echo "<h2 style='color:#FF0000'>La tasa de interes anual es: $tasa_anualrespuesta %<h2>";
+        }
+        ?>
+
 </body>
 </div>
 
 </html>
-
-<?php
-
-
-
-if (!empty($_POST['intereses']) && !empty($_POST['capital']) && !empty($_POST['tiempo'])) {
-
-    echo "<br><br>";
-    $intereses = $_POST['intereses'];
-    $capital = $_POST['capital'];
-    $tiempo_duracion_credito = $_POST['tiempo']; // el periodo es igual a n en la formula correspondiente
-
-    $multiplicacion = $capital * $tiempo_duracion_credito;
-
-    $resultado = $intereses / $multiplicacion;
-    $tasa_anual = $resultado * 100; // lo pasamos a notacion matematica
-
-    $tasa_anualrespuesta = number_format($tasa_anual, 1);
-    echo "<h2>La tasa de interes anual es: $tasa_anualrespuesta %<h2>";
-}
-?>

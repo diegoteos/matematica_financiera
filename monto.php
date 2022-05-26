@@ -33,20 +33,22 @@ include 'menu/menu-general.php';
         </form>
     </div>
 
+
+    <?php
+    if (!empty($_POST['capital']) && !empty($_POST['interes'])) {
+
+        echo "<br><br>";
+        $monto = 0;
+        $capital = $_POST['capital'];
+        $interes = $_POST['interes'];
+        $monto = $capital + $interes;
+
+        $numeroFormateado = number_format($monto, 2);
+        '<div class="container">';
+        echo "<h2 style='color:#FF0000'>El monto total en quetzales es de:<h2>" . "<h1>Q$numeroFormateado<h1>";
+    }
+    ?>
+
 </body>
 
 </html>
-
-<?php
-if (!empty($_POST['capital']) && !empty($_POST['interes'])) {
-
-    echo "<br><br>";
-    $monto = 0;
-    $capital = $_POST['capital'];
-    $interes = $_POST['interes'];
-    $monto = $capital + $interes;
-
-    $numeroFormateado = number_format($monto, 2);
-    echo "<h2>El monto total en quetzales es de:<h2>" . "<h1>Q$numeroFormateado<h1>";
-}
-?>

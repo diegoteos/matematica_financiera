@@ -34,42 +34,38 @@ include '../menu/menu-compuesto.php';
             te dio infinitos decimales, incluye unicamente 10 para que tu resultado sea mas optimo.
             <br><br><button class="btn btn-success" type="submit">Obtener resultados</button>
         </form>
+
+        <?php
+        if (!empty($_POST['monto']) && !empty($_POST['interes']) && !empty($_POST['periodos']) && !empty($_POST['tiempos'])) {
+
+            echo "<br><br>";
+            $capital = 0;
+            $monto = $_POST['monto'];
+            $interes = $_POST['interes'];
+            $periodos_al_año = $_POST['periodos']; // el periodo anual es lo que corresponde a p en la formula correspondiente
+            $tiempo_duracion_credito = $_POST['tiempos']; // el periodo es igual a n en la formula correspondiente
+
+
+            $tasa_anual = $interes / 100; // lo pasamos a notacion matematica   
+            $division = $tasa_anual / $periodos_al_año;
+            $nporp = $tiempo_duracion_credito * $periodos_al_año;
+            $parentesis = 1 + $division;
+            $parentesis_final = $parentesis ** $nporp;
+            $resultado = $monto / $parentesis_final;
+
+
+            $numeroFormateado = number_format($resultado, 2);
+            '<div class="container">';
+            echo "<h2 style='color:#FF0000'>El capital es de:<h2>";
+            echo "<h1 style='color:#FF0000'>Q$numeroFormateado<h1>";
+
+            '<br><br>';
+            $interes2 = $monto - $resultado;
+            $interesResultado = number_format($interes2, 2);
+            echo "<br><h4>El interes resultante es de: <h4>Q" . $interesResultado;
+        }
+        ?>
 </body>
 </div>
 
 </html>
-
-<?php
-if (!empty($_POST['monto']) && !empty($_POST['interes']) && !empty($_POST['periodos']) && !empty($_POST['tiempos'])) {
-
-    echo "<br><br>";
-    $capital = 0;
-    $monto = $_POST['monto'];
-    $interes = $_POST['interes'];
-    $periodos_al_año = $_POST['periodos']; // el periodo anual es lo que corresponde a p en la formula correspondiente
-    $tiempo_duracion_credito = $_POST['tiempos']; // el periodo es igual a n en la formula correspondiente
-
-
-    $tasa_anual = $interes / 100; // lo pasamos a notacion matematica   
-    $division = $tasa_anual / $periodos_al_año;
-    $nporp = $tiempo_duracion_credito * $periodos_al_año;
-    $parentesis = 1 + $division;
-    $parentesis_final = $parentesis ** $nporp;
-    $resultado = $monto / $parentesis_final;
-
-
-    $numeroFormateado = number_format($resultado, 2);
-    echo "<h2>El capital es de:<h2>";
-    echo "<h1>Q$numeroFormateado<h1>";
-
-    '<br><br>';
-    $interes2 = $monto - $resultado;
-    $interesResultado = number_format($interes2, 2);
-    echo "<br><h4>El interes resultante es de: <h4>Q" . $interesResultado;
-}
-
-
-
-
-
-?>

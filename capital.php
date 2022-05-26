@@ -32,19 +32,21 @@ include 'menu/menu-general.php';
             <br><br><button type="submit" class="btn btn-success">Obtener monto</button>
         </form>
     </div>
+    <?php
+    if (!empty($_POST['monto']) && !empty($_POST['interes'])) {
+
+        echo "<br><br>";
+        $capital = 0;
+        $monto = $_POST['monto'];
+        $interes = $_POST['interes'];
+        $capital = $monto - $interes;
+
+        $numeroFormateado = number_format($capital, 2);
+        '<div class="container">';
+        echo "<h2 style='color:#FF0000'>El capital total en quetzales es de: Q$numeroFormateado<h2>";
+    }
+    ?>
 </body>
+</div>
 
 </html>
-<?php
-if (!empty($_POST['monto']) && !empty($_POST['interes'])) {
-
-    echo "<br><br>";
-    $capital = 0;
-    $monto = $_POST['monto'];
-    $interes = $_POST['interes'];
-    $capital = $monto - $interes;
-
-    $numeroFormateado = number_format($capital, 2);
-    echo "<h2>El capital total en quetzales es de:<h2>" . "<h1>Q$numeroFormateado<h1>";
-}
-?>

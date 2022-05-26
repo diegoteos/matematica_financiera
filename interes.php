@@ -34,19 +34,23 @@ include 'menu/menu-general.php';
         </form>
 
     </div>
+    <?php
+    if (!empty($_POST['monto']) && !empty($_POST['capital'])) {
+
+        echo "<br><br>";
+        $interes = 0;
+        $monto = $_POST['monto'];
+        $capital = $_POST['capital'];
+        $interes = $monto - $capital;
+
+        $numeroFormateado = number_format($interes, 2);
+        ?>
+        '<div class="container">';
+            <?php 
+        echo "<h2 style='color:#FF0000'>El interes total en quetzales es de: Q$numeroFormateado<h2>";
+    }
+    ?>
+</div>
 </body>
 
 </html>
-<?php
-if (!empty($_POST['monto']) && !empty($_POST['capital'])) {
-
-    echo "<br><br>";
-    $interes = 0;
-    $monto = $_POST['monto'];
-    $capital = $_POST['capital'];
-    $interes = $monto - $capital;
-
-    $numeroFormateado = number_format($interes, 2);
-    echo "<h2>El interes total en quetzales es de:<h2>" . "<h1>Q$numeroFormateado<h1>";
-}
-?>

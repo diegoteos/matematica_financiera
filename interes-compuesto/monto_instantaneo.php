@@ -33,35 +33,37 @@ include '../menu/menu-compuesto.php';
             te dio infinitos decimales, incluye unicamente 10 para que tu resultado sea mas optimo.
             <br><br><button class="btn btn-success" type="submit">Obtener resultados</button>
         </form>
+
+        <?php
+
+
+
+        if (!empty($_POST['capital']) && !empty($_POST['interes']) && !empty($_POST['tiempo'])) {
+
+            echo "<br><br>";
+            $monto = 0;
+            $capital = $_POST['capital'];
+            $interes = $_POST['interes'];
+            $tiempo_duracion_credito = $_POST['tiempo']; // el periodo es igual a n en la formula correspondiente
+
+            $tasa_anual = $interes / 100; // lo pasamos a notacion matematica
+            $potencia = $tiempo_duracion_credito * $tasa_anual;
+            $euler = M_E ** $potencia;
+            $resultado = $capital * $euler;
+            $numeroFormateado = number_format($resultado, 2);
+            echo "<h2 style='color:#FF0000'>El monto es de:<h2>";
+            echo "<h1 style='color:#FF0000'>Q$numeroFormateado<h1>";
+
+            $totalInteres = $resultado - $capital;
+            $numeroFormateado = number_format($totalInteres, 2);
+            '<div class="container">';
+            echo '<br>';
+            echo "<h4>El interes generado es de:<h4>";
+            echo "<h2>Q$numeroFormateado<h2>";
+        }
+        ?>
+
 </body>
 </div>
 
 </html>
-
-<?php
-
-
-
-if (!empty($_POST['capital']) && !empty($_POST['interes']) && !empty($_POST['tiempo'])) {
-
-    echo "<br><br>";
-    $monto = 0;
-    $capital = $_POST['capital'];
-    $interes = $_POST['interes'];
-    $tiempo_duracion_credito = $_POST['tiempo']; // el periodo es igual a n en la formula correspondiente
-
-    $tasa_anual = $interes / 100; // lo pasamos a notacion matematica
-    $potencia = $tiempo_duracion_credito * $tasa_anual;
-    $euler = M_E ** $potencia;
-    $resultado = $capital * $euler;
-    $numeroFormateado = number_format($resultado, 2);
-    echo "<h2>El monto es de:<h2>";
-    echo "<h1>Q$numeroFormateado<h1>";
-
-    $totalInteres = $resultado - $capital;
-    $numeroFormateado = number_format($totalInteres, 2);
-    echo '<br>';
-    echo "<h4>El interes generado es de:<h4>";
-    echo "<h2>Q$numeroFormateado<h2>";
-}
-?>
