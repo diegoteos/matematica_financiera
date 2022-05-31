@@ -9,14 +9,14 @@ include '../menu/menu-compuesto.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICC - Capital - interes instantaneo</title>
+    <title>ICC - Capital - Anualidades</title>
 </head>
 
 <body>
     <div class="container">
         <div class="p-5 bg-light">
             <div class="container">
-                <h1 style='color:red'>Interes compuesto instantaneo:</h1>
+                <h1 style='color:red'>Anualidades:</h1>
                 <h3>Formula para obtener el Capital</h3>
                 <h3>C = M / e^(ni)</h3>
                 <hr class="my-2">

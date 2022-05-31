@@ -50,7 +50,7 @@
                             <a class="navbar-brand" href="monto.php">Monto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="navbar-brand" href="capital_instantaneo.php">Capital anualidades</a>
+                            <a class="navbar-brand" href="capital_instantaneo.php">Capital instantaneo</a>
                         </li>
                         <li class="nav-item">
                             <a class="navbar-brand" href="monto_instantaneo.php">Monto instantaneo</a>
